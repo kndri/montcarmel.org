@@ -1,8 +1,32 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* fonts.css */
+@font-face {
+  font-family: 'Vogue';
+  src: url('./assets//fonts/vogue/Vogue.otf') format('opentype');
+  /* Additional font formats and font weights can be added here */
+}
+
+@font-face {
+  font-family: 'Vogue';
+  src: url('./assets/fonts/vogue/Vogue-Bold.otf') format('opentype');
+  font-weight: bold;
+}
+/* Inter Font */
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/inter/Inter-Regular.ttf') format('truetype');
+  /* Additional font formats and font weights can be added here */
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/inter/Inter-Bold.ttf') format('truetype');
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/inter/Inter-Light.ttf') format('truetype');
+    font-weight: light;
+  }
 }
 
 .logo {
