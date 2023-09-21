@@ -1,15 +1,16 @@
 import React from "react";
+import styled from "styled-components";
 
 interface DesktopNavProps {
   transparent?: boolean;
 }
 
 const DesktopNav: React.FC<DesktopNavProps> = ({ transparent }) => {
-  const navTextColor = transparent ? "text-white" : "text-white";
+  const navTextColor = "text-black";
 
   return (
     <nav
-      className={`text-white w-screen flex items-center z-[9999] transition-colors duration-200 justify-between flex-wrap p-4 lg:p-6 fixed top-0 left-0 font-bold font-primary uppercase bg-transparent ${navTextColor}`}
+      className={`text-white w-screen flex items-center z-[9999] transition-colors duration-200 justify-between flex-wrap p-4 lg:p-6 fixed top-0 left-0 font-bold font-primary uppercase bg-white ${navTextColor}`}
     >
       {/* Logo */}
       <div className="flex-1 text-center lg:text-left">

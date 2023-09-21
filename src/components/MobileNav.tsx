@@ -17,6 +17,7 @@ const MobileNav: React.FC = () => {
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
+          backgroundColor: 'white',
         }}
       >
         <HamburgerMenu isOpen={isOpen} toggleMenu={toggleMenu} />
@@ -25,7 +26,7 @@ const MobileNav: React.FC = () => {
         <div className="flex-1 text-center lg:text-left">
           <a
             href="/"
-            className={`w-5 whitespace-nowrap hover:text-white text-white tracking-wide uppercase`}
+            className={`w-5 whitespace-nowrap hover:text-white text-black tracking-wide uppercase`}
           >
             Mont Carmel
           </a>

@@ -1,10 +1,22 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const media = {
+  desktop: (...args) => css`
+    @media (min-width: 870px) {
+      ${css(...args)};
+    }
+  `,
+};
 
 const Section = styled.section`
   background-color: white;
   padding-bottom: 48px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  ${media.desktop`
+    padding-left: 50px;
+    padding-right: 50px;
+`}
 `;
 
 const MissionText = styled.p`
@@ -22,7 +34,7 @@ const Spacer = styled.div`
 `;
 
 const Heading = styled.h3`
-  font-family: "Vogue";
+  font-family: "Playfair Display";
   color: rgb(40, 44, 50);
   font-size: 68px;
   line-height: 0.95;

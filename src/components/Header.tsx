@@ -12,7 +12,8 @@ const Header: React.FC<HeaderProps> = ({ transparent }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-screen z-[9999] ${
+      style={{ height: 65, paddingBottom: 75 }}
+      className={`relative top-0 left-0 w-screen z-[9999] ${
         transparent ? "bg-transparent" : "bg-black"
       } transition-colors duration-200`}
     >

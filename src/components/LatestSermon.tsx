@@ -1,12 +1,29 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+interface LatestSermonProps {
+  title: string;
+  speaker: string;
+  thumbnailUrl: string;
+}
+
+const media = {
+  desktop: (...args) => css`
+    @media (min-width: 870px) {
+      ${css(...args)};
+    }
+  `,
+};
 
 // Styled components for the LatestSermon component
 const SermonSection = styled.section`
 position: relative;
 overflow: hidden;
 border-radius: 20px;
-padding: 50px; /* Add padding to the entire section */
+padding: 25px;
+${media.desktop`
+  padding: 50px;
+`}
 
 & .sermon-image {
   width: 100%;
@@ -30,7 +47,7 @@ padding: 50px; /* Add padding to the entire section */
     & button {
       align-items: center;
       appearance: auto;
-      background-color: rgb(255, 255, 255);
+      background-color: #e1dbcb;
       background-image: none;
       background-origin: padding-box;
       background-position-x: 0%;
@@ -85,16 +102,43 @@ padding: 50px; /* Add padding to the entire section */
   }
 `;
 
-const LatestSermon: React.FC = () => {
+const SermonTitle = styled.h3`
+  color: black;
+  font-size: 26px;
+  font-weight: 600;
+  padding-bottom: 10px;
+`;
+
+const SermonSubHeading = styled.p`
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  color: rgb(40, 44, 50);
+  padding-top: 12px;
+  padding-bottom: 10px;
+`;
+
+const LatestSermon: React.FC<LatestSermonProps> = ({
+  title,
+  speaker,
+  thumbnailUrl,
+}) => {
   return (
     <SermonSection>
       <div className="sermon-image">
         <img
           style={{ height: "100%", objectFit: "cover" }}
           className="chakra-image css-j098jv"
-          src="https://cdn.titanvest.com/images/marketing/careers/values-video-preview.png"
+          src={thumbnailUrl} // Use the provided thumbnail URL
+          alt="Sermon Thumbnail" // Add an alt text for accessibility
         />
       </div>
+      <SermonSubHeading>Latest Sermon</SermonSubHeading>
+      <SermonTitle>
+        {title} by {speaker}
+      </SermonTitle>
       <div className="button-container">
         <button>
           <div>
@@ -105,7 +149,7 @@ const LatestSermon: React.FC = () => {
               ></path>
             </svg>
           </div>
-          Watch Sermon
+          Watch now
         </button>
       </div>
     </SermonSection>

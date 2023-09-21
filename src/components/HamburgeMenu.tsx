@@ -34,12 +34,12 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
           >
             <path
               d="M1.66675 1.5L17.9302 17.7635"
-              stroke="currentColor"
+              stroke="black"
               strokeWidth="2"
             ></path>
             <path
               d="M1.66675 17.7634L17.9302 1.49997"
-              stroke="currentColor"
+              stroke="black"
               strokeWidth="2"
             ></path>
           </svg>
@@ -52,9 +52,9 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M0 1L23 1" stroke="currentColor" strokeWidth="2"></path>
-            <path d="M0 9L23 9" stroke="currentColor" strokeWidth="2"></path>
-            <path d="M0 17L23 17" stroke="currentColor" strokeWidth="2"></path>
+            <path d="M0 1L23 1" stroke="black" strokeWidth="2"></path>
+            <path d="M0 9L23 9" stroke="black" strokeWidth="2"></path>
+            <path d="M0 17L23 17" stroke="black" strokeWidth="2"></path>
           </svg>
         )}
       </div>

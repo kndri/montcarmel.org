@@ -15,7 +15,7 @@
   font-family: 'Inter';
   src: url('./assets/fonts/inter/Inter-Regular.ttf') format('truetype');
   /* Additional font formats and font weights can be added here */
-
+}
   @font-face {
     font-family: 'Inter';
     src: url('./assets/fonts/inter/Inter-Bold.ttf') format('truetype');
@@ -27,7 +27,9 @@
     src: url('./assets/fonts/inter/Inter-Light.ttf') format('truetype');
     font-weight: light;
   }
-}
+
+  /* Playfair Disaply */
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 .logo {
   height: 6em;
