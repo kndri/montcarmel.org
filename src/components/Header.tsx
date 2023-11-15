@@ -12,10 +12,10 @@ const Header: React.FC<HeaderProps> = ({ transparent }) => {
 
   return (
     <header
-      style={{ height: 65, paddingBottom: 75 }}
       className={`relative top-0 left-0 w-screen z-[9999] ${
         transparent ? "bg-transparent" : "bg-black"
       } transition-colors duration-200`}
+      style={{ height: isDesktop ? "65px" : "0px" }}
     >
       <div className="container mx-auto">
         {isDesktop ? (

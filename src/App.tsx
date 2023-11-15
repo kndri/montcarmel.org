@@ -1,25 +1,20 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import "./App.css";
-import Header from "./components/Header";
-import HomePageHero from "./components/HomePageHero";
-import MissionCallout from "./components/MissionCallout";
-import LatestSermon from "./components/LatestSermon";
-import Footer from "./components/Footer";
-import Events from "./components/Events";
+import Home from './pages/Home';
+import About from './pages/About';
+import Layout from "./layouts/Layout";
 
 function App() {
   return (
-    <>
-      <Header transparent />
-      <HomePageHero />
-      <MissionCallout />
-      <LatestSermon
-        title="Arise and Shine"
-        speaker="Pst. Freddy Shembo"
-        thumbnailUrl="https://cdn.titanvest.com/images/marketing/careers/values-video-preview.png"
-      />
-      <Events />
-      <Footer />
-    </>
+    <Router>
+      <Layout>
+        <Routes>
+        <Route path="/" Component={Home} />
+        <Route path="/about" Component={About} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 

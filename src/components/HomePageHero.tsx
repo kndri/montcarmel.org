@@ -21,6 +21,7 @@ const HeroSection = styled.section`
   padding: 2rem;
   height: 75vh;
   margin-bottom: 30px;
+  margin-top: 30px;
 
   & .video-container {
     position: absolute;

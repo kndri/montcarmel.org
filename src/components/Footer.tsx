@@ -1,9 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import mc_logo from '../assets/images/mc_logo.png';
-
-
 const media = {
   desktop: (...args) => css`
     @media (min-width: 870px) {
